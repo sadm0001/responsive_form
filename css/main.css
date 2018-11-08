@@ -1,0 +1,225 @@
+@import url('some google sans-serif font');
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+/* make sure to select a new google font and use it for your header */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+html{
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol','Merriweather';
+    
+}
+input, textarea {
+  background-color : hsl(78, 8%, 75%);
+
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #aaa;
+    
+}
+header{
+    /* Photo by Wyatt Ryan on Unsplash */
+    /* Replace this with an image that you select */
+    /*selective focus photography of short-coated brown puppy facing right side*/
+    background-image: url(../img/berkay-gumustekin-402114-unsplash.jpg); 
+    
+    background-size: 100% auto;
+    background-position: center center;
+}
+header h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    padding: 1rem 1rem;
+    color: #1A96A8;
+    
+    text-shadow: 2px 2px 4px hsl(240, 12%, 13%);
+    vertical-align: top;
+    text-align: right;
+    min-height: 12rem;
+}
+header img{
+    width: 15%;
+    float:left;
+    margin-right: 1rem;
+}
+form{
+    padding: 1rem 1rem 2rem;
+    text-shadow: 3px 3px 3px rgb(81, 82, 84);
+}
+.form-box{
+    padding: 0.25rem 0 1rem;
+}
+label{
+    display: block;
+    margin: 0;
+    font-size: 1rem;
+    color: #2e1f29;
+    
+}
+input{
+    margin:0;
+    font-size: 1rem;
+    padding: 0.2rem 1rem;
+    width: 100%;
+    color: hsl(27, 58%, 67%);
+    
+    
+    }
+
+input#min.price::after,
+input.price#max::after{
+    content: "$" attr(data-price);
+    display: block;
+    margin-top: -1.5rem;
+    /*color: #835A59;*/
+    color: hsl(346, 78%, 32%); 
+    text-shadow: 3px 3px 3px rgb(81, 82, 84);
+    
+}
+    ::placeholder{
+    color: hsl(27, 58%, 67%);
+    opacity: 50%;
+}
+
+.search-btn{
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.25rem 1rem;
+    background-color:#c70f34;
+    color: #ffffff;
+    box-shadow: 5px 5px 5px rgb(81, 82, 84);
+}
+@media all and (min-width:650px){
+    body{
+        color: rgb(222, 223, 226);
+        text-align: center;
+        }
+    
+    input{
+        color: hsl(27, 58%, 67%);
+    }
+    label{
+        color:rgb(20, 92, 100);
+    }
+    form{
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .form-box{
+        flex-basis: 100%;
+        background-color: rgb(243, 242, 240);
+        border: solid 1px;
+        box-shadow: 5px 5px 5px rgb(81, 82, 84);
+        
+        
+    }
+    .form-box.check-in {
+        flex-basis: 50%;
+        background-color:rgb(243, 242, 240);
+        border: solid 1px;
+        box-shadow: 5px 5px 5px rgb(81, 82, 84);
+    }
+    .form-box.check-out {
+        flex-basis: 50%;
+        background-color: rgb(243, 242, 240);
+        border: solid 1px;
+        box-shadow: 5px 5px 5px rgb(81, 82, 84);
+    }
+    .form-box.min-price{
+        flex-basis: 100%;
+        margin-left: 0%;
+    }
+    .form-box.max-price{
+        flex-basis: 100%;
+        margin-left: 0%;
+    }
+    .form-box.dogs,
+    .form-box.search{
+        flex-basis: 50%;
+    }
+    .form-box.search{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items:flex-end;
+        
+    }
+    .form-box.dogs,
+    .form-box.min-price,
+    .form-box.max-price,
+}
+@media all and (min-width:1000px){
+    
+    main{
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        max-width: 1200px;
+        
+    }
+    header{
+        flex-basis: 30%;
+        background-size: auto 100%;
+    }
+    form{
+        flex-basis: 70%;
+    
+    }
+}
+@media all and (max-width:649px){
+    form{
+        display: grid;
+        grid-template-columns: 100%;
+        text-shadow: 3px 3px 3px rgb(81, 82, 84);
+        
+        
+    }
+    
+    label{
+        color: #dbd1c9;
+        
+    }
+    .form-box{
+        flex-basis: 100%;
+        background-color: #1A96A8;
+        border: solid 1px #0d2e70;
+        box-shadow: 2px 2px 2px hsl(240, 12%, 13%);
+        text-align: center;
+        
+        
+    }
+    .form-box.check-in {
+        flex-basis: 100%;
+        background-color: #1A96A8;
+        border: solid 1px #0d2e70;
+        box-shadow: 2px 2px 2px hsl(240, 12%, 13%);
+    }
+    .form-box.check-out {
+        flex-basis: 100%;
+        background-color: #1A96A8;
+        border: solid 1px #0d2e70;
+        box-shadow: 2px 2px 2px hsl(240, 12%, 13%);
+    }
+    .search-btn{
+        background-color: hsl(218, 7%, 33%);
+        box-shadow: 2px 2px 2px rgb(38, 27, 39);
+    }
+    
+
+    
+        
+}
